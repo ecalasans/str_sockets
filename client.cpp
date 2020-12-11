@@ -50,11 +50,6 @@ int main() {
     sendto(sockfd, velocidades, sizeof(velocidades),
            0, (const struct sockaddr *) &servaddr, sizeof(servaddr));
 
-//    sendto(sockfd, (const char *)hello, strlen(hello),
-//           0, (const struct sockaddr *) &servaddr,
-//           sizeof(servaddr));
-    //printf("Hello message sent.\n");
-
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,
                  MSG_WAITALL, (struct sockaddr *) &servaddr,
                  &len);
